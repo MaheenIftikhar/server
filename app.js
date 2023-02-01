@@ -12,6 +12,7 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/api/users");
 var categoriesRouter = require("./routes/api/categories");
 var productsRouter = require("./routes/api/products");
+var paymentRouter = require("./routes/api/payment");
 var auctionRouter = require("./routes/api/auction");
 
 env.config();
@@ -34,6 +35,7 @@ app.use("/api/users", usersRouter);
 app.use("/api/categories", categoriesRouter);
 app.use("/api/products", productsRouter);
 app.use("/api/auction", auctionRouter);
+app.use("/api/payment", paymentRouter);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
